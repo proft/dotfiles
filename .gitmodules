@@ -57,7 +57,7 @@
 	url = git://github.com/majutsushi/tagbar.git
 [submodule ".vim/bundle/tcomment"]
 	path = .vim/bundle/tcomment
-	url = git://github.com/vim-scripts/tcommand.git
+	url = git://github.com/vim-scripts/tComment.git
 [submodule ".vim/bundle/rooter"]
 	path = .vim/bundle/rooter
 	url = git://github.com/airblade/vim-rooter.git

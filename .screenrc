@@ -1,0 +1,16 @@
+startup_message off 
+hardstatus alwayslastline 
+hardstatus string "%= %{kW}[ %H ] [ %t ]"
+
+caption always "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %{..Y} %l %c %d/%m/%Y " 
+
+# detach on hangup
+autodetach on
+
+# set a big scrolling buffer
+defscrollback 5000
+
+term xterm-color
+
+bindkey -k k2 prev
+bindkey -k k3 next

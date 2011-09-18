@@ -67,3 +67,6 @@
 [submodule ".vim/bundle/zencoding"]
 	path = .vim/bundle/zencoding
 	url = git://github.com/vim-scripts/ZenCoding.vim.git
+[submodule ".vim/bundle/searchfold"]
+	path = .vim/bundle/searchfold
+	url = git://github.com/vim-scripts/searchfold.vim.git

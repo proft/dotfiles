@@ -21,6 +21,8 @@ set nocompatible
 set modeline        " last lines in document sets vim mode
 set modelines=3     " number lines checked for modelines
 
+set autoread "Set to auto read when a file is changed from the outside"
+
 " tab
 set tabstop=4
 set shiftwidth=4

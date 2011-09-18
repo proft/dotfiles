@@ -1,121 +1,15 @@
-# All option values are case sensitive unless other noted.
-
-# List of modifiers:
-#  - Control (aliases: C, Ctrl)
-#  - Shift (aliases: S)
-#  - Mod1 (aliases: A, Alt)
-#  - Mod4 (aliases: U, Super)
-
-# List of keys can be obtained with --print-keys option.
-
 [SETTINGS]
-# Keyboard Layout. This is used to produce keybindings that are easier to
-# press with your keyboard layout.
-# Possible values: Dvorak, QWERTY.
 keyboard_layout = QWERTY
-
-# Keybinding prefix consists of a series of modifiers and/or keys
-# separated by +
-# Examples: Ctrl+Alt, U+a, A+x+w, F12, XF86_RotateWindows
 prefix = Alt
-
-# All windows of the same application are grouped. Windows of the same
-# group are binded to the keys with the same prefix. The following option
-# specifies what windows should belong to the same group.
-# Possible values:
-#  - AWN -- two windows belong to the same group if they have equal awns.
-#  - Group -- group windows as window manager normally does.
-#  - None -- do not group at all.
 group_windows_by = AWN
-
-# Change window titles, so they include the corresponding shortcuts.
-# %t and %s are replaced by the window title and the shortcut
-# accordingly. Only one occurance of %t or %s in title_format is
-# possible. Set to None to deny modifying the window titles.
 title_format = %t   /%s/
-
-# What to do if the window which is to be activated is not on the
-# current desktop.
-# Possible values:
-#  - SwitchDesktop -- switch to the desktop which the window is on.
-#  - MoveWindow -- move the window to the current desktop.
-#  - None -- just activate the window (actual behaviour may differ
-# with different window managers).
 desktop_action = SwitchDesktop
-
-# History of shortcuts is used to avoid them floating between
-# different windows across the sessions.
-# Set history_length to 0 to disable the history.
 history_length = 20
+window_types = NORMAL DIALOG UTILITY MENU
 
 [HISTORY]
-gtk-logout-helper = k
-synapse = a
-update-manager = u
-gmailwatcher = y
-eog = j
-exe = z
-unity-window-decorator = u
-gloobus-preview = b
-dd = h
-file-roller = l
-<unknown> = k
-easytag = a
-gnome-settings-daemon = q
-gnome-screenshot = a
-gnome-display-properties = d
-gnome-about = a
-vv = v
-cc = l
-tt = d
 
 [RULES]
-# This section specifies rules according to which window classes or names
-# (titles) are transformed to abstract window names (AWNs). When a new
-# window appears the program tries out the rules (from top to bottom)
-# until it founds out one that matches a window property. If no
-# sutable rule is found the window class will be assigned to the AWN.
-
-# AWNs are used to determine window shortcuts.  For example, if AWN is
-# 'xterm' than keybinding will more likely 'mod+x'. If it is already
-# assigned to another window or is used by an another program the next
-# keybinding to try out will be 'mod+t'. It sorts out the alphabetical
-# characters of AWN until it finds one whose corresponding key is not
-# grabbed. If it turns out there is no such a key, the window will be
-# binded to any different unused key.
-
-# Format:
-# property.[regex] = [[!]awn]
-# where property is title or class.
-
-# regex matching is case insensetive. awn may contain backreferences,
-# e.g. \1 is replaced with the first group of regex. If awn is omitted
-# the window will not be binded to any of keys. If regex is omitted it
-# implies windows without the property or with empty property. Exclamation
-# mark before awn denotes that the shortcut should be permanent. Only the
-# first symbol after ! is used to compose a shortcut. Permanent shortcuts
-# have a higher priotity than history shortcuts and other rules, and they
-# are never assigned to different windows.
-
-# Examples:
-
-# set awn to firefox for all the windows whose titles end with firefox
-# title..*firefox$ = firefox
-
-# remove prefix gnome- from window classes
-# class.gnome-(.*) = \1
-
-# transorm classes icecat, iceweasel, and icedove to awns cat, weasel, and
-# dove respectively
-# class.ice(cat|weasel|dove) = \1
-
-# don't bind windows that don't have class property
-# class. =
-
-# always bind emacs window to 'e'
-# class.emacs = !e
-# title..*x-nautilus-desktop.* = zz
-class.desktop_window = 
 
 class.chromium-browser = !c
 class.gvim = !v

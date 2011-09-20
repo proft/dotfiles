@@ -140,6 +140,7 @@ alias wheredj='python -c "from distutils.sysconfig import get_python_lib; print 
 alias mcl='mysql --auto-rehash -uroot -pqwerty'
 alias cdt='cd ~/temp/'
 alias td='curl -I proft.me; ping -c2 proft.me'
+alias phttp='python -m SimpleHTTPServer'
 
 alias -g M='| more'
 alias -g L='| less'

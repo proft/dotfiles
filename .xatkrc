@@ -2,19 +2,39 @@
 keyboard_layout = QWERTY
 prefix = Alt
 group_windows_by = AWN
-title_format = %t   /%s/
+title_format = %t
 desktop_action = SwitchDesktop
 history_length = 20
 window_types = NORMAL DIALOG UTILITY MENU
 
 [HISTORY]
+update-manager = u
+xfce4-notifyd = y
+xfce4-settings-manager = a
+gloobus-preview = b
+parole = a
+anki = a
+file-roller = k
+meld = a
+gimp-2.6 = a
+ristretto = j
+gthumb = b
+xfce4-panel = a
+exe = a
+helper-dialog = h
+gwibber = b
+gloobus-preview-configuration = u
+session-installer = a
+xfce4-screenshooter = h
+gcalctool = u
+clipit = a
 
 [RULES]
 
 class.chromium-browser = !c
 class.gvim = !v
 class.nautilus = !n
-class.gnome-terminal = !t
+class.xfce4-terminal = !t
 class.evince = !e
 class.firefox = !f
 class.goldendict = !g
@@ -23,6 +43,8 @@ class.smplayer = !m
 class.gedit = !i
 class.deadbeef = !d
 class.keepassx = !x
-class.libreoffice-writer = !w
+class.libreoffice-writer = !o
 class.pidgin = !p
 class.skype = !s
+class.Wunderlist = !w
+class.Sublime_text = !l

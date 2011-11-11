@@ -12,8 +12,8 @@ set laststatus=2
 
 set guioptions-=T
 set guioptions-=m
-set lines=34
-set columns=105
+"set lines=35
+"set columns=105
 
 " normal work backspace
 set backspace=indent,eol,start whichwrap+=<,>,[,]
@@ -36,7 +36,13 @@ function ToggleFullScreen()
 endfunction
 
 nmap <F11> :call ToggleFullScreen()<CR>
-" nmap <leader>m :set lines=34
+
+function FixTrifle()
+    exec('set lines=35')
+    exec('highlight iCursor guifg=white guibg=orange')
+endfunction
+
+nmap ,f :call FixTrifle()<CR>
 
 " m$ поведение
 source $VIMRUNTIME/mswin.vim
@@ -258,8 +264,9 @@ let g:fuf_coveragefile_globPatterns = ['**/*.py', '**/*.html', '**/*.css', '**/*
 nnoremap <silent> sf :FufFile<CR>
 nnoremap <silent> sd :FufDir<CR>
 nnoremap <silent> sb :FufBuffer<CR>
-nnoremap <silent> <leader>l1 :FufFile ~/Dropbox/tabs/<CR>
-nnoremap <silent> <leader>l2 :FufFile ~/Dropbox/blog/<CR>
+nnoremap <silent> <leader>2 :FufFile ~/Dropbox/tabs/<CR>
+nnoremap <silent> <leader>3 :FufFile ~/Dropbox/blog/<CR>
+nnoremap <silent> <leader>1 :FufFile ~/Dropbox/0force/<CR>
 nnoremap <silent> sc :FufCoverageFile<CR>
 
 " *** tcomment ***

@@ -127,13 +127,14 @@ alias pc='rsync -Pr'
 alias d='pydf'
 alias ff='find . -iname'
 alias pf='dpkg -l | grep'
+alias pg='ps aux | grep'
 alias v='vim'
 alias sv='sudo vim'
 alias gv='gvim --remote-silent'
 alias s='sudo service'
 alias i='ipython'
 alias ur='unrar --enable-charset x'
-alias pi='pip install $1 -U -i http://d.pypi.python.org/simple/ -M --mirrors=http://d.pypi.python.org/'
+alias pi='pip install $1 -U'
 alias piz='pip freeze'
 alias spi='sudo pip install $1 -U -i http://d.pypi.python.org/simple/ -M --mirrors=http://d.pypi.python.org/'
 alias wheredj='python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"'
@@ -190,8 +191,4 @@ alias djms="python -m smtpd -n -c DebuggingServer localhost:1025"
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-# servers
-source ~/.zsh_hosts
-
-# projects
-source ~/.zsh_projects
+source ~/.zsh_local

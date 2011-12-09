@@ -12,8 +12,8 @@ set laststatus=2
 
 set guioptions-=T
 set guioptions-=m
-"set lines=35
-"set columns=105
+set lines=30
+set columns=105
 
 " normal work backspace
 set backspace=indent,eol,start whichwrap+=<,>,[,]

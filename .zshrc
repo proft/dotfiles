@@ -126,7 +126,6 @@ alias naut='xdg-open $PWD'
 alias pc='rsync -Pr'
 alias d='pydf'
 alias ff='find . -iname'
-alias ga="grep -rI $1 **/*"
 alias pf='dpkg -l | grep'
 alias pg='ps aux | grep'
 alias v='vim'
@@ -172,7 +171,6 @@ alias -g F="| notify-send --icon=/home/proft/temp/design/img/icons/checkmark.png
 
 # apt
 alias ai='sudo apt-get install'
-alias ad='sudo apt-get remove'
 alias au='sudo apt-get update'
 alias aup='sudo apt-get upgrade'
 alias up='sudo apt-get update && sudo apt-get upgrade -u'

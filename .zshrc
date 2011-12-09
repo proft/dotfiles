@@ -171,6 +171,7 @@ alias -g F="| notify-send --icon=/home/proft/temp/design/img/icons/checkmark.png
 
 # apt
 alias ai='sudo apt-get install'
+alias ad='sudo apt-get remove'
 alias au='sudo apt-get update'
 alias aup='sudo apt-get upgrade'
 alias up='sudo apt-get update && sudo apt-get upgrade -u'

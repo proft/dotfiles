@@ -81,6 +81,15 @@ setopt append_history hist_ignore_all_dups hist_ignore_space autocd correct_all 
 # zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 export LS_COLORS='*.py=34:*.zip=31:*.rar=31:*.tar.gz=31:*.mp3=33:*.doc=32:*.pdf=32:*.txt=32:*.html=32:*.htm=32:*.jpg=36:*.png=36:*.gif=36'
 
+# Less Colors for Man Pages
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
 # -[ functions ]-
 name() {
     name=$1
@@ -114,6 +123,7 @@ alias pu=pushd
 alias po=popd
 alias h=history
 alias grep='egrep --color'
+alias gr='grep -rIn $1 **/*'
 alias ll='ls -l'
 alias la='ls -a'
 alias ls='ls --classify --color --human-readable --group-directories-first'
@@ -129,7 +139,7 @@ alias pc='rsync -Pr'
 alias d='pydf'
 alias ff='find . -iname'
 alias pf='dpkg -l | grep'
-alias pg='ps aux | grep'
+alias pg='ps aux | grep -i'
 alias v='vim'
 alias sv='sudo vim'
 alias gv='gvim --remote-silent'
@@ -178,7 +188,8 @@ alias au='sudo apt-get update'
 alias aup='sudo apt-get upgrade'
 alias up='sudo apt-get update && sudo apt-get upgrade -u'
 alias af='sudo apt-cache search'
-alias as='sudo apt-cache show'
+alias as='apt-cache show'
+alias ap='apt-cache policy'
 alias akey='sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys'
 
 # django

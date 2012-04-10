@@ -4,16 +4,14 @@
 colorscheme lilypink
 
 " font for gvim
-set guifont=Courier\ New\ 14
-
-" format for status line
-set statusline=%<%F%h%m%r%=%y\ (%{&fileformat})\ [%{strlen(&fileencoding)?&fileencoding:'-'}/%{&encoding}]\ %l,%c%V\ %P
-set laststatus=2
+set guifont=Courier\ New\ 17
 
 set guioptions-=T
 set guioptions-=m
-set lines=30
-set columns=105
+" set lines=30
+" set columns=105
+set lines=42
+set columns=130
 
 " normal work backspace
 set backspace=indent,eol,start whichwrap+=<,>,[,]
@@ -61,7 +59,7 @@ map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
 
-autocmd FileType human,text set spell spelllang=ru,en
+" autocmd FileType human,text set spell spelllang=ru,en
 
 " change color of cursor
 highlight iCursor guifg=white guibg=orange
@@ -267,6 +265,8 @@ nnoremap <silent> sb :FufBuffer<CR>
 nnoremap <silent> <leader>2 :FufFile ~/Dropbox/tabs/<CR>
 nnoremap <silent> <leader>3 :FufFile ~/Dropbox/blog/<CR>
 nnoremap <silent> <leader>1 :FufFile ~/Dropbox/0force/<CR>
+nnoremap <silent> <leader>h :FufFile ~/<CR>
+nnoremap <silent> <leader>n :FufFile ~/Dropbox/notes/<CR>
 nnoremap <silent> sc :FufCoverageFile<CR>
 
 " *** tcomment ***

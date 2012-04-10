@@ -17,6 +17,14 @@ call pathogen#helptags()
 filetype on
 filetype plugin on
 
+set encoding=utf-8
+
+" format for status line
+set statusline=%<%F%h%m%r%=%y\ (%{&fileformat})\ [%{strlen(&fileencoding)?&fileencoding:'-'}/%{&encoding}]\ %l/%L,%c%V\ %P
+set laststatus=2
+
+set mouse=a
+
 set nocompatible
 set modeline        " last lines in document sets vim mode
 set modelines=3     " number lines checked for modelines
@@ -91,6 +99,9 @@ nnoremap <leader>q gqip
 " reselect the text
 nnoremap <leader>v V`]
 
+" kill window
+nnoremap K :q<cr>
+
 " delete end marker
 nnoremap <leader>m <Esc>:%s/\r//g<CR>
 
@@ -111,6 +122,9 @@ inoremap <C-l> <esc>lC
 inoremap <C-w> <esc>cw
 inoremap <C-b> <esc>cb
 
+" delete to the blackhole register
+nnoremap <Leader>d "_d
+
 " easy window navigation
 nnoremap j gj
 nnoremap k gk
@@ -122,13 +136,19 @@ map <C-h> <C-w>h
 map <C-l> <C-w>l
 nnoremap <leader>w <C-w>v<C-w>l
 
-" line move
+" move a line of text using ALT+[jk], indent with ALT+[hl]
 nnoremap <C-j> :m+<CR>==
 nnoremap <C-k> :m-2<CR>==
+nnoremap <C-h> <<
+nnoremap <C-l> >>
 inoremap <C-j> <Esc>:m+<CR>==gi
 inoremap <C-k> <Esc>:m-2<CR>==gi
+inoremap <C-h> <Esc><<`]a
+inoremap <C-l> <Esc>>>`]a
 vnoremap <C-j> :m'>+<CR>gv=gv
 vnoremap <C-k> :m-2<CR>gv=gv
+vnoremap <C-h> <gv
+vnoremap <C-l> >gv
 
 " switches match highlighting on and off
 nmap <F6> :set hls!<CR>
@@ -158,72 +178,7 @@ map <C-right> <ESC>:bn<CR>
 map <C-left> <ESC>:bp<CR>
 
 " Setting up the command mode in russian layout
-map ё `
-map й q
-map ц w
-map у e
-map к r
-map е t
-map н y
-map г u
-map ш i
-map щ o
-map з p
-map х [
-map ъ ]
-map ф a
-map ы s
-map в d
-map а f
-map п g
-map р h
-map о j
-map л k
-map д l
-map ж ;
-map э '
-map я z
-map ч x
-map с c
-map м v
-map и b
-map т n
-map ь m
-map б ,
-map ю .
-map Ё ~
-map Й Q
-map Ц W
-map У E
-map К R
-map Е T
-map Н Y
-map Г U
-map Ш I
-map Щ O
-map З P
-map Х {
-map Ъ }
-map Ф A
-map Ы S
-map В D
-map А F
-map П G
-map Р H
-map О J
-map Л K
-map Д L
-map Ж :
-map Э "
-map Я Z
-map Ч X
-map С C
-map М V
-map И B
-map Т N
-map Ь M
-map Б <
-map Ю >
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
 " heading
 map h1 yypVr=o
@@ -246,3 +201,10 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " *** pep8 ***
 let g:pep8_map='<leader>8'
+
+" *** powerline ***
+"set guifont=Inconsolata-dz\ for\ Powerline\ 10
+"set fillchars+=stl:\ ,stlnc:\
+"set guifont=Ubuntu\ Mono\ 12
+" set guifont=Ubuntu\ Mono\ 12\ for\ Powerline:h14
+

@@ -108,6 +108,11 @@ vack() {
     vim $(ack -g $@)
 }
 
+# arch services
+function service() {
+  sudo /etc/rc.d/$1 $2
+}
+
 WORDCHARS=${WORDCHARS//[&=\/;!#%]}
 
 # -[ alias ]-
@@ -137,11 +142,12 @@ alias mkdir='nocorrect mkdir'
 alias naut='xdg-open $PWD'
 alias pc='rsync -Pr'
 alias d='pydf'
+alias df='df -h'
 alias ff='find . -iname'
-alias pf='dpkg -l | grep'
 alias pg='ps aux | grep -i'
 alias v='vim'
 alias sv='sudo vim'
+alias svh='sudo vim /etc/hosts'
 alias gv='gvim --remote-silent'
 alias s='sudo service'
 alias i='ipython'
@@ -154,6 +160,14 @@ alias mcl='mysql --auto-rehash -uroot -pqwerty'
 alias cdt='cd ~/temp/'
 alias td='curl -I proft.me; ping -c2 proft.me'
 alias phttp='python -m SimpleHTTPServer'
+alias ack='ack-grep'
+
+alias mktar='tar -cvf'
+alias mkbz2='tar -cvjf'
+alias mkgz='tar -cvzf'
+alias untar='tar -xvf'
+alias unbz2='tar -xvjf'
+alias ungz='tar -xvzf'
 
 alias -g M='| more'
 alias -g L='| less'
@@ -186,11 +200,24 @@ alias ai='sudo apt-get install'
 alias ad='sudo apt-get remove'
 alias au='sudo apt-get update'
 alias aup='sudo apt-get upgrade'
-alias up='sudo apt-get update && sudo apt-get upgrade -u'
-alias af='sudo apt-cache search'
+alias upu='sudo apt-get update && sudo apt-get upgrade -u'
+alias af='apt-cache search'
 alias as='apt-cache show'
 alias ap='apt-cache policy'
 alias akey='sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys'
+alias pfu='dpkg -l | grep'
+
+# pacman
+alias p='sudo pacman'
+alias pi='sudo pacman -S'
+alias q='sudo pacman -Q'
+alias y='yaourt'
+alias up='yaourt -Syua'
+alias rc='sudo vim /etc/rc.conf'
+
+# network
+
+alias wscan='sudo iwlist wlan0 scanning | grep ESSID'
 
 # django
 alias djrs="python manage.py runserver"
@@ -203,6 +230,8 @@ alias djm="python manage.py migrate"
 alias djms="python -m smtpd -n -c DebuggingServer localhost:1025"
 
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
+
+export EDITOR=vim
 
 source ~/.zsh_local

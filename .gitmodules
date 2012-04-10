@@ -70,3 +70,9 @@
 [submodule ".vim/bundle/searchfold"]
 	path = .vim/bundle/searchfold
 	url = git://github.com/vim-scripts/searchfold.vim.git
+[submodule ".vim/bundle/powerline"]
+	path = .vim/bundle/powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule ".vim/bundle/easymotion"]
+	path = .vim/bundle/easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git

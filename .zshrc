@@ -117,6 +117,7 @@ WORDCHARS=${WORDCHARS//[&=\/;!#%]}
 
 # -[ alias ]-
 alias j=jobs
+alias t=top
 alias g=git
 alias gc='git commit -a -m'
 alias gp='git push'
@@ -149,8 +150,7 @@ alias v='vim'
 alias sv='sudo vim'
 alias svh='sudo vim /etc/hosts'
 alias gv='gvim --remote-silent'
-alias s='sudo service'
-alias i='ipython'
+alias i='ipython3'
 alias ur='unrar --enable-charset x'
 alias pi='pip install $1 -U'
 alias piz='pip freeze'
@@ -208,12 +208,14 @@ alias akey='sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys'
 alias pfu='dpkg -l | grep'
 
 # pacman
-alias p='sudo pacman'
+alias p='pacman'
 alias pi='sudo pacman -S'
-alias q='sudo pacman -Q'
+alias pf='pacman -Ss'
+alias q='pacman -Q'
 alias y='yaourt'
 alias up='yaourt -Syua'
 alias rc='sudo vim /etc/rc.conf'
+alias pcfg='sudo vim /etc/pacman.conf'
 
 # network
 

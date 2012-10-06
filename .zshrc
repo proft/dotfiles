@@ -160,7 +160,7 @@ alias mcl='mysql --auto-rehash -uroot -pqwerty'
 alias cdt='cd ~/temp/'
 alias td='curl -I proft.me; ping -c2 proft.me'
 alias phttp='python -m SimpleHTTPServer'
-alias ack='ack-grep'
+# alias ack='ack-grep'
 
 alias mktar='tar -cvf'
 alias mkbz2='tar -cvjf'
@@ -175,7 +175,7 @@ alias -g H='| head'
 alias -g T='| tail'
 alias -g G="| grep"
 alias -g A="| ccze -A"
-alias -g F="| notify-send --icon=/home/proft/temp/design/img/icons/checkmark.png Finished!"
+alias -g F="&& notify-send --icon=/home/proft/temp/img/img/icons/checkmark.png Finished!"
 [[ -f /usr/bin/xclip ]] && {
     alias -g C="| xclip"
 }
@@ -207,15 +207,17 @@ alias ap='apt-cache policy'
 alias akey='sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys'
 alias pfu='dpkg -l | grep'
 
-# pacman
+# pacman && arch
 alias p='pacman'
 alias pi='sudo pacman -S'
+alias pd='sudo pacman -R'
 alias pf='pacman -Ss'
 alias q='pacman -Q'
 alias y='yaourt'
-alias up='yaourt -Syua'
+alias u='yaourt -Syua'
 alias rc='sudo vim /etc/rc.conf'
 alias pcfg='sudo vim /etc/pacman.conf'
+alias n='sudo netcfg -r wlan'
 
 # network
 

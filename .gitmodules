@@ -55,9 +55,6 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
-[submodule ".vim/bundle/tcomment"]
-	path = .vim/bundle/tcomment
-	url = git://github.com/vim-scripts/tComment.git
 [submodule ".vim/bundle/rooter"]
 	path = .vim/bundle/rooter
 	url = git://github.com/airblade/vim-rooter.git
@@ -76,3 +73,21 @@
 [submodule ".vim/bundle/easymotion"]
 	path = .vim/bundle/easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule ".vim/bundle/color-lilypink"]
+	path = .vim/bundle/color-lilypink
+	url = git://github.com/vim-scripts/lilypink.git
+[submodule ".vim/bundle/tcomment"]
+	path = .vim/bundle/tcomment
+	url = git://github.com/vim-scripts/tComment.git
+[submodule "bundle/closetag"]
+	path = bundle/closetag
+	url = git://github.com/docunext/closetag.vim.git
+[submodule ".vim/bundle/closetag"]
+	path = .vim/bundle/closetag
+	url = git://github.com/docunext/closetag.vim.git
+[submodule ".vim/bundle/solarized"]
+	path = .vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/tlib"]
+	path = .vim/bundle/tlib
+	url = git://github.com/vim-scripts/tlib.git

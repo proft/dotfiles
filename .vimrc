@@ -88,6 +88,7 @@ let mapleader = ","
 " folding
 nnoremap <Space> za
 vnoremap <Space> za
+nnoremap <A-space> zA
 nnoremap <leader>z zMa<esc>
 
 " fold tag
@@ -208,3 +209,6 @@ let g:pep8_map='<leader>8'
 "set guifont=Ubuntu\ Mono\ 12
 " set guifont=Ubuntu\ Mono\ 12\ for\ Powerline:h14
 
+" *** close tag ***
+autocmd FileType html,htmldjango,jinjahtml let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml source ~/.vim/bundle/closetag/plugin/closetag.vim

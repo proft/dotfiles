@@ -16,10 +16,15 @@ status.unknown = blue bold
 status.ignored = black bold
 
 [alias]
-slog = log --template '{date|shortdate} [{rev}:{node|short}] {author|person}: {desc|firstline}\n' -l 10
+slog = log --template '{date|shortdate} [{rev}:{node|short}] {author|person}: {desc|firstline}\n' -l10
 sin = incoming --template '{date|shortdate} [{rev}:{node|short}] {author|person}: {desc|firstline}\n'
 sout = outgoing --template '{date|shortdate} [{rev}:{node|short}] {author|person}: {desc|firstline}\n'
 sheads = heads --template '{date|shortdate} [{rev}:{node|short}] {author|person}: {desc|firstline}\n'
 sglog = glog --template '[{rev}:{node|short}] by {author|person} \n{desc|fill68}\n\n'
+sh = log --color=always -pr
 
 cm = commit -m
+
+up = pull  -u
+
+%include ~/.hgrc_local

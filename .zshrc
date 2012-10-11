@@ -48,7 +48,7 @@ precmd() {
 }
 
 # PROMPT='%{$fg_bold[yellow]%}%n@%m%{$reset_color%}'
-PROMPT='%B%F{yellow}%n%b%F{green}${HG}${vcs_info_msg_0_}%F{magenta}[%h]%F{blue}%(!.#.$)%F{magenta}%(?.. E:%?)$(cjobs)%f '
+PROMPT='%B%F{yellow}%n%b%F{magenta}@%m%F{green}${HG}${vcs_info_msg_0_}%F{blue}%(!.#.$)%F{magenta}%(?.. E:%?)$(cjobs)%f '
 RPROMPT="%{$fg_bold[grey]%}%~/%{$reset_color%}%"
 
 # -[ completion ]-
@@ -118,6 +118,8 @@ WORDCHARS=${WORDCHARS//[&=\/;!#%]}
 # -[ alias ]-
 alias j=jobs
 alias t=top
+alias nt='sudo nethogs wlan0'
+alias it='sudo iotop -oa'
 alias g=git
 alias gc='git commit -a -m'
 alias gp='git push'

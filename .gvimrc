@@ -79,7 +79,7 @@ set iskeyword=@,48-57,_,192-255
 let python_highlight_all = 1
 let python_highlight_space_errors = 0
 autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType python set cc=80
+"autocmd FileType python set cc=80
 autocmd FileType python iab pdb import ipdb; ipdb.set_trace() 
 autocmd FileType python iab u8 # -*- coding: utf-8 -*-
 au Filetype htmldjango inoremap <buffer> <c-g> {{<space><space>}}<left><left><left>

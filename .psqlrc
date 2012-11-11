@@ -1,0 +1,10 @@
+\pset null 'NULL'
+\encoding unicode
+\set PROMPT1 '%n@%M:%>%x %/# '
+\set PROMPT2 ''
+\set HISTSIZE 2000
+\timing on
+\set qstats91 'SELECT usename, datname, substring(current_query, 1,100) || ''...'' As query FROM pg_stat_activity WHERE current_query != ''<IDLE>'';'
+\set qstats92 'SELECT usename, datname, left(query,100) || ''...'' As query FROM pg_stat_activity WHERE state != ''idle'' ;'
+\pset pager always
+\set eav 'EXPLAIN ANALUZE VERBOSE'

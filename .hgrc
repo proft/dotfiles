@@ -16,15 +16,15 @@ status.unknown = blue bold
 status.ignored = black bold
 
 [alias]
-slog = log --template '{date|shortdate} [{rev}:{node|short}] {author|person}: {desc|firstline}\n' -l10
-sin = incoming --template '{date|shortdate} [{rev}:{node|short}] {author|person}: {desc|firstline}\n'
-sout = outgoing --template '{date|shortdate} [{rev}:{node|short}] {author|person}: {desc|firstline}\n'
+lg = log --template '\033[0;33m{date|shortdate}\033[0m [{rev}:{node|short}] \033[0;32m{author|person}\033[0m: {desc|firstline}\n' -l20
+sh = log --color=always -pr
+lf = log --stat --template '\033[0;33m{date|shortdate}\033[0m [{rev}:{node|short}] \033[0;32m{author|person}\033[0m: {desc|firstline}\n' -l20
+sin = incoming --template '\033[0;33m{date|shortdate}\033[0m [{rev}:{node|short}] \033[0;32m{author|person}\033[0m: {desc|firstline}\n'
+sout = outgoing --template '\033[0;33m{date|shortdate}\033[0m [{rev}:{node|short}] \033[0;32m{author|person}\033[0m: {desc|firstline}\n'
 sheads = heads --template '{date|shortdate} [{rev}:{node|short}] {author|person}: {desc|firstline}\n'
 sglog = glog --template '[{rev}:{node|short}] by {author|person} \n{desc|fill68}\n\n'
-sh = log --color=always -pr
 
 cm = commit -m
-
 up = pull  -u
 
 %include ~/.hgrc_local

@@ -34,9 +34,6 @@
 [submodule ".vim/bundle/pep8"]
 	path = .vim/bundle/pep8
 	url = git://github.com/vim-scripts/pep8.git
-[submodule ".vim/bundle/pyflakes"]
-	path = .vim/bundle/pyflakes
-	url = git://github.com/kevinw/pyflakes-vim.git
 [submodule ".vim/bundle/rainbow-parenthesi"]
 	path = .vim/bundle/rainbow-parenthesi
 	url = git://github.com/vim-scripts/Rainbow-Parenthesis.git
@@ -91,3 +88,9 @@
 [submodule ".vim/bundle/tlib"]
 	path = .vim/bundle/tlib
 	url = git://github.com/vim-scripts/tlib.git
+[submodule ".vim/bundle/vim-herokudoc-theme"]
+	path = .vim/bundle/vim-herokudoc-theme
+	url = git://github.com/uu59/vim-herokudoc-theme.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git

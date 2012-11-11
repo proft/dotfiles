@@ -99,18 +99,14 @@ name() {
 
 mcd() { mkdir $1; cd $1 }
 lcd() { cd "$1" && ls }
-chkgc() { 
-    curl -I -H "Accept-Encoding: gzip, deflate" $1 | grep "Content-Encoding" 
-    curl -I $1 | grep "Content-Type" 
-}
 
 vack() {
     vim $(ack -g $@)
 }
 
-# arch services
-function service() {
-  sudo /etc/rc.d/$1 $2
+# alarm
+a() {
+    echo "notify-send -i ~/temp/img/img/alarm.png $2" | at $1
 }
 
 WORDCHARS=${WORDCHARS//[&=\/;!#%]}
@@ -118,6 +114,7 @@ WORDCHARS=${WORDCHARS//[&=\/;!#%]}
 # -[ alias ]-
 alias j=jobs
 alias t=top
+alias s='sudo systemctl'
 alias nt='sudo nethogs wlan0'
 alias it='sudo iotop -oa'
 alias g=git
@@ -151,8 +148,8 @@ alias pg='ps aux | grep -i'
 alias v='vim'
 alias sv='sudo vim'
 alias svh='sudo vim /etc/hosts'
-alias gv='gvim --remote-silent'
-alias i='ipython3'
+alias gv='gvim --remote-tab-silent'
+alias i='ipython'
 alias ur='unrar --enable-charset x'
 alias pi='pip install $1 -U'
 alias piz='pip freeze'
@@ -221,19 +218,19 @@ alias rc='sudo vim /etc/rc.conf'
 alias pcfg='sudo vim /etc/pacman.conf'
 alias n='sudo netcfg -r wlan'
 
-# network
-
-alias wscan='sudo iwlist wlan0 scanning | grep ESSID'
-
 # django
-alias djrs="python manage.py runserver"
-alias djdb="python manage.py syncdb"
-alias djml="python manage.py migrate --list"
-alias djs="python manage.py shell"
-alias djsm="python manage.py schemamigration $1 --auto"
-alias djsmi="python manage.py schemamigration $1 --init"
-alias djm="python manage.py migrate"
-alias djms="python -m smtpd -n -c DebuggingServer localhost:1025"
+alias drs="python manage.py runserver"
+alias ddb="python manage.py syncdb"
+alias dml="python manage.py migrate --list"
+alias ds="python manage.py shell"
+alias dmn="python manage.py"
+alias dt="python manage.py test"
+alias dsm="python manage.py schemamigration $1 --auto"
+alias dsmi="python manage.py schemamigration $1 --init"
+alias dm="python manage.py migrate"
+alias dms="python -m smtpd -n -c DebuggingServer localhost:1025"
+alias dmm="python manage.py makemessages -a"
+alias dcm="python manage.py compilemessages"
 
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh

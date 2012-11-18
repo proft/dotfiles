@@ -30,3 +30,5 @@
 
 #[diff]
 #    external = /home/proft/scripts/git-diff.py
+[push]
+	default = simple

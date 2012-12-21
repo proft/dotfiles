@@ -150,6 +150,7 @@ alias sv='sudo vim'
 alias svh='sudo vim /etc/hosts'
 alias gv='gvim --remote-tab-silent'
 alias i='ipython'
+alias ipl='ipython --pylab'
 alias ur='unrar --enable-charset x'
 alias pi='pip install $1 -U'
 alias piz='pip freeze'
@@ -231,6 +232,11 @@ alias dm="python manage.py migrate"
 alias dms="python -m smtpd -n -c DebuggingServer localhost:1025"
 alias dmm="python manage.py makemessages -a"
 alias dcm="python manage.py compilemessages"
+
+# tt
+alias ta="tt -a"
+alias tp="tt -c"
+alias tl="tt -t"
 
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh

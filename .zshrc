@@ -113,7 +113,7 @@ WORDCHARS=${WORDCHARS//[&=\/;!#%]}
 
 # -[ alias ]-
 alias j=jobs
-alias t=top
+alias t=htop
 alias s='sudo systemctl'
 alias nt='sudo nethogs wlan0'
 alias it='sudo iotop -oa'

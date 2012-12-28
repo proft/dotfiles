@@ -70,9 +70,6 @@
 [submodule ".vim/bundle/color-lilypink"]
 	path = .vim/bundle/color-lilypink
 	url = git://github.com/vim-scripts/lilypink.git
-[submodule ".vim/bundle/tcomment"]
-	path = .vim/bundle/tcomment
-	url = git://github.com/vim-scripts/tComment.git
 [submodule "bundle/closetag"]
 	path = bundle/closetag
 	url = git://github.com/docunext/closetag.vim.git
@@ -91,3 +88,4 @@
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+

@@ -98,7 +98,7 @@ name() {
 }
 
 mcd() { mkdir $1; cd $1 }
-lcd() { cd "$1" && ls }
+lcd() { cd "$1" && ls -l }
 
 vack() {
     vim $(ack -g $@)
@@ -149,6 +149,7 @@ alias v='vim'
 alias sv='sudo vim'
 alias svh='sudo vim /etc/hosts'
 alias gv='gvim --remote-tab-silent'
+alias vimup='cd ~/reps/dotfiles;git submodule foreach git pull origin master'
 alias i='ipython'
 alias ipl='ipython --pylab'
 alias ur='unrar --enable-charset x'

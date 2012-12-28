@@ -92,3 +92,6 @@
 [submodule ".vim/bundle/tcomment_vim"]
 	path = .vim/bundle/tcomment_vim
 	url = git://github.com/tomtom/tcomment_vim.git
+[submodule ".vim/bundle/indentline"]
+	path = .vim/bundle/indentline
+	url = git://github.com/Yggdroot/indentLine.git

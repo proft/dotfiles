@@ -312,3 +312,6 @@ set completeopt=menuone,longest,preview
 
 " *** gundo ***
 map <leader>g :GundoToggle<CR>
+
+" *** indentline ***
+hi Conceal guifg=#404040 guibg=NONE

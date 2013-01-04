@@ -96,3 +96,9 @@
 	path = .vim/bundle/indentline
 	url = git://github.com/Yggdroot/indentLine.git
 
+[submodule ".vim/bundle/vim-ado-manager"]
+	path = .vim/bundle/vim-ado-manager
+	url = git://github.com/proft/vim-ado-manager.git
+[submodule ".vim/bundle/vimtips-fortune"]
+	path = .vim/bundle/vimtips-fortune
+	url = https://github.com/hobbestigrou/vimtips-fortune

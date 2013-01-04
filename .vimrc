@@ -168,8 +168,8 @@ endfunction
 map <Leader>o :call Browser ()<CR>
 
 " correct filetype
-map <Leader>tm :set ft=markdown<CR>
-map <Leader>td :set ft=htmldjango<CR>
+"map <Leader>tm :set ft=markdown<CR>
+"map <Leader>td :set ft=htmldjango<CR>
 
 " switches wrap
 nmap <F8> :set wrap!<CR>

@@ -103,3 +103,6 @@
 	path = .vim/bundle/vimtips-fortune
 	url = https://github.com/hobbestigrou/vimtips-fortune
 
+[submodule ".vim/bundle/jedi-vim"]
+	path = .vim/bundle/jedi-vim
+	url = git://github.com/davidhalter/jedi-vim.git

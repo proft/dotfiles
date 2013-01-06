@@ -315,3 +315,10 @@ map <leader>g :GundoToggle<CR>
 
 " *** indentline ***
 hi Conceal guifg=#404040 guibg=NONE
+
+" *** local config
+let gv_local = expand('~/.gvim.local')
+if filereadable(gv_local)
+    exec ':so ' . gv_local
+endif
+

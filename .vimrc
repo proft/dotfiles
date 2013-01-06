@@ -163,7 +163,7 @@ map <leader>p :call CopyPath()<CR>
 " open url in chromium-browser
 function! Browser ()
   let line = matchstr(getline("."), 'http:\/\/[^ >,;:]*')
-  exec ":silent !chromium-browser ".line
+  exec ":silent !chromium ".line
 endfunction
 map <Leader>o :call Browser ()<CR>
 

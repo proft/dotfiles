@@ -102,3 +102,4 @@
 [submodule ".vim/bundle/vimtips-fortune"]
 	path = .vim/bundle/vimtips-fortune
 	url = https://github.com/hobbestigrou/vimtips-fortune
+

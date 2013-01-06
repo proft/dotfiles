@@ -28,15 +28,9 @@
 [submodule ".vim/bundle/mru"]
 	path = .vim/bundle/mru
 	url = git://github.com/vim-scripts/mru.vim.git
-[submodule ".vim/bundle/pep8"]
-	path = .vim/bundle/pep8
-	url = git://github.com/vim-scripts/pep8.git
 [submodule ".vim/bundle/rainbow-parenthesi"]
 	path = .vim/bundle/rainbow-parenthesi
 	url = git://github.com/vim-scripts/Rainbow-Parenthesis.git
-[submodule ".vim/bundle/ropevim"]
-	path = .vim/bundle/ropevim
-	url = git://github.com/klen/rope-vim.git
 [submodule ".vim/bundle/sessionman"]
 	path = .vim/bundle/sessionman
 	url = git://github.com/vim-scripts/sessionman.vim.git
@@ -70,9 +64,6 @@
 [submodule ".vim/bundle/color-lilypink"]
 	path = .vim/bundle/color-lilypink
 	url = git://github.com/vim-scripts/lilypink.git
-[submodule "bundle/closetag"]
-	path = bundle/closetag
-	url = git://github.com/docunext/closetag.vim.git
 [submodule ".vim/bundle/closetag"]
 	path = .vim/bundle/closetag
 	url = git://github.com/docunext/closetag.vim.git
@@ -106,3 +97,6 @@
 [submodule ".vim/bundle/jedi-vim"]
 	path = .vim/bundle/jedi-vim
 	url = git://github.com/davidhalter/jedi-vim.git
+[submodule ".vim/bundle/python-mode"]
+	path = .vim/bundle/python-mode
+	url = git://github.com/klen/python-mode.git

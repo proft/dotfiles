@@ -35,12 +35,11 @@ endfunction
 
 nmap <F11> :call ToggleFullScreen()<CR>
 
-function FixTrifle()
-    exec('set lines=35')
+function FixCursor()
     exec('highlight iCursor guifg=white guibg=orange')
 endfunction
 
-nmap ,f :call FixTrifle()<CR>
+nmap ,f :call FixCursor()<CR>
 
 " m$ поведение
 source $VIMRUNTIME/mswin.vim

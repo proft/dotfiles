@@ -151,6 +151,9 @@ vnoremap <C-k> :m-2<CR>gv=gv
 vnoremap <C-h> <gv
 vnoremap <C-l> >gv
 
+" hide startup message
+set shortmess+=I
+
 " switches match highlighting on and off
 nmap <F6> :set hls!<CR>
 

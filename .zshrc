@@ -98,7 +98,7 @@ name() {
 }
 
 mcd() { mkdir $1; cd $1 }
-lcd() { cd "$1" && ls -l }
+lcd() { cd "$1" && grc ls -l }
 
 vack() {
     vim $(ack -g $@)
@@ -171,7 +171,7 @@ alias h=history
 alias grep='egrep --color'
 alias gr='grep -rIn $1 **/*'
 alias ll='ls -l'
-alias la='ls -a'
+alias la='ls -la'
 alias ls='ls --classify --color --human-readable --group-directories-first'
 alias lsd='ls -lhd *(-/DN)' # only dirs
 alias l='less -N -M'
@@ -233,6 +233,7 @@ alias -g F="&& notify-send --icon=/home/proft/temp/img/img/icons/checkmark.png F
     alias tail="grc tail"
     alias head="grc head"
     alias ll='grc ls --classify --color --human-readable --group-directories-first -l'
+    alias la='grc ls --classify --color --human-readable --group-directories-first -la'
     alias du='grc du -h'
 }
 

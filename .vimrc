@@ -126,7 +126,7 @@ inoremap <C-b> <esc>cb
 " delete to the blackhole register
 nnoremap <Leader>d "_d
 
-" easy window navigation
+" easy line navigation
 nnoremap j gj
 nnoremap k gk
 
@@ -157,11 +157,11 @@ set shortmess+=I
 " switches match highlighting on and off
 nmap <F6> :set hls!<CR>
 
-" copy current path
-function CopyPath()
-    let @* = expand("%:p:h")
-endfunction
-map <leader>p :call CopyPath()<CR>
+"copy current file name
+nmap <Leader>f :let @+ = expand('%:t')<CR>
+
+"copy current file directory
+nmap <Leader>F :let @+ = expand('%:p:h')<CR>
 
 " open url in chromium-browser
 function! Browser ()

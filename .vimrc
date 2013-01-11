@@ -119,9 +119,9 @@ inoremap <C-p> <ESC>o
 " delete current line
 nnoremap <C-d> dd
 inoremap <C-d> <esc>ddi
-inoremap <C-l> <esc>lC
-inoremap <C-w> <esc>cw
-inoremap <C-b> <esc>cb
+" inoremap <C-l> <esc>lC
+" inoremap <C-w> <esc>cw
+" inoremap <C-b> <esc>cb
 
 " delete to the blackhole register
 nnoremap <Leader>d "_d
@@ -173,6 +173,7 @@ map <Leader>o :call Browser ()<CR>
 " correct filetype
 "map <Leader>tm :set ft=markdown<CR>
 "map <Leader>td :set ft=htmldjango<CR>
+nmap <Leader>ft :set ft=
 
 " switches wrap
 nmap <F8> :set wrap!<CR>
@@ -202,9 +203,6 @@ cmap WA wa
 cmap Wq wq
 
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
-" *** pep8 ***
-let g:pep8_map='<leader>8'
 
 " *** powerline ***
 "set guifont=Inconsolata-dz\ for\ Powerline\ 10

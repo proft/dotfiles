@@ -90,9 +90,6 @@
 [submodule ".vim/bundle/vim-ado-manager"]
 	path = .vim/bundle/vim-ado-manager
 	url = git://github.com/proft/vim-ado-manager.git
-[submodule ".vim/bundle/vimtips-fortune"]
-	path = .vim/bundle/vimtips-fortune
-	url = https://github.com/hobbestigrou/vimtips-fortune
 
 [submodule ".vim/bundle/jedi-vim"]
 	path = .vim/bundle/jedi-vim
@@ -101,3 +98,12 @@
 	path = .vim/bundle/python-mode
 	url = git://github.com/klen/python-mode.git
 
+[submodule ".vim/bundle/vim-snipmate"]
+	path = .vim/bundle/vim-snipmate
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule ".vim/bundle/vim-addon-mw-utils"]
+	path = .vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule ".vim/bundle/snipmate-snippets"]
+	path = .vim/bundle/snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git

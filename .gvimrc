@@ -74,16 +74,55 @@ set iskeyword=@,48-57,_,192-255
 " Заставляем shift-insert работать как в Xterm
 "map <S-Insert> <MiddleMouse>
 
+" tidy html
+vnoremap <Leader>T :!tidy -q -i -xml<CR>
+
 " for python
 let python_highlight_all = 1
 let python_highlight_space_errors = 0
-autocmd FileType python set omnifunc=pythoncomplete#Complete
+"autocmd FileType python set omnifunc=pythoncomplete#Complete
 "autocmd FileType python set cc=80
 autocmd FileType python iab pdb import ipdb; ipdb.set_trace() 
 autocmd FileType python iab u8 # -*- coding: utf-8 -*-
 au Filetype htmldjango inoremap <buffer> <c-g> {{<space><space>}}<left><left><left>
 au Filetype htmldjango inoremap <buffer> <c-h> {%<space><space>%}<left><left><left>
 au Filetype htmldjango inoremap <buffer> <c-f> {{<space>MEDIA_URL<space>}}
+
+" for django 
+let g:last_relative_dir = ''
+nnoremap \1 :call RelatedFile ("models.py")<cr>
+nnoremap \2 :call RelatedFile ("views.py")<cr>
+nnoremap \3 :call RelatedFile ("urls.py")<cr>
+nnoremap \4 :call RelatedFile ("admin.py")<cr>
+nnoremap \5 :call RelatedFile ("tests.py")<cr>
+nnoremap \6 :call RelatedFile ( "templates/" )<cr>
+nnoremap \7 :call RelatedFile ( "templatetags/" )<cr>
+nnoremap \8 :call RelatedFile ( "management/" )<cr>
+nnoremap \0 :e settings.py<cr>
+nnoremap \9 :e urls.py<cr>
+
+fun! RelatedFile(file)
+    #This is to check that the directory looks djangoish
+    if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
+        exec "tabe %:h/" . a:file
+        let g:last_relative_dir = expand("%:h") . '/'
+        return ''
+    endif
+    if g:last_relative_dir != ''
+        exec "tabee " . g:last_relative_dir . a:file
+        return ''
+    endif
+    echo "Cant determine where relative file is : " . a:file
+    return ''
+endfun
+
+fun SetAppDir()
+    if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
+        let g:last_relative_dir = expand("%:h") . '/'
+        return ''
+    endif
+endfun
+autocmd BufEnter *.py call SetAppDir()
 
 " for markdown
 autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown
@@ -321,3 +360,6 @@ if filereadable(gv_local)
     exec ':so ' . gv_local
 endif
 
+" *** python-klen
+let g:pymode_lint_write = 0
+let g:pymode_lint_ignore = "E401"

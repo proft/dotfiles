@@ -285,6 +285,7 @@ alias dcm="python manage.py compilemessages"
 alias ta="tt -a"
 alias tp="tt -c"
 alias tl="tt -t"
+alias tg="tt -g; chromium /tmp/tt.svg"
 
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh

@@ -273,6 +273,7 @@ alias rc='sudo vim /etc/rc.conf'
 alias pcfg='sudo vim /etc/pacman.conf'
 alias n='sudo netcfg -r wlan'
 alias utime='sudo ntpd -qg; sudo ntpd hwclock -w'
+alias up='cd ~/reps/dotfiles/;git pull'
 
 # django
 alias drs="python manage.py runserver"

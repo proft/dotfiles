@@ -185,6 +185,7 @@ alias la='ls -la'
 alias ls='ls --classify --color --human-readable --group-directories-first'
 alias lsd='ls -lhd *(-/DN)' # only dirs
 alias l='less -N -M'
+alias c='cat '
 alias vl='/usr/share/vim/vim73/macros/less.sh'
 alias cp='nocorrect cp --interactive --verbose --recursive --preserve=all'
 alias mv='nocorrect mv --verbose --interactive'

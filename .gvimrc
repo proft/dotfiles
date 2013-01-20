@@ -87,6 +87,14 @@ autocmd FileType python iab u8 # -*- coding: utf-8 -*-
 au Filetype htmldjango inoremap <buffer> <c-g> {{<space><space>}}<left><left><left>
 au Filetype htmldjango inoremap <buffer> <c-h> {%<space><space>%}<left><left><left>
 au Filetype htmldjango inoremap <buffer> <c-f> {{<space>MEDIA_URL<space>}}
+au Filetype htmldjango let b:surround_{char2nr("v")} = "{{ \r }}"
+au Filetype htmldjango let b:surround_{char2nr("{")} = "{{ \r }}"
+au Filetype htmldjango let b:surround_{char2nr("%")} = "{% \r %}"
+au Filetype htmldjango let b:surround_{char2nr("b")} = "{% block \1block name: \1 %}\r{% endblock \1\1 %}"
+au Filetype htmldjango let b:surround_{char2nr("i")} = "{% if \1condition: \1 %}\r{% endif %}"
+au Filetype htmldjango let b:surround_{char2nr("w")} = "{% with \1with: \1 %}\r{% endwith %}"
+au Filetype htmldjango let b:surround_{char2nr("f")} = "{% for \1for loop: \1 %}\r{% endfor %}"
+au Filetype htmldjango let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
 
 " for django 
 let g:last_relative_dir = ''
@@ -102,14 +110,13 @@ nnoremap \0 :e settings.py<cr>
 nnoremap \9 :e urls.py<cr>
 
 fun! RelatedFile(file)
-    #This is to check that the directory looks djangoish
     if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
-        exec "tabe %:h/" . a:file
+        exec "edit %:h/" . a:file
         let g:last_relative_dir = expand("%:h") . '/'
         return ''
     endif
     if g:last_relative_dir != ''
-        exec "tabee " . g:last_relative_dir . a:file
+        exec "edit " . g:last_relative_dir . a:file
         return ''
     endif
     echo "Cant determine where relative file is : " . a:file

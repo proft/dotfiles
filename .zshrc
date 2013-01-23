@@ -280,6 +280,7 @@ alias pcfg='sudo vim /etc/pacman.conf'
 alias n='sudo netcfg -r wlan'
 alias utime='sudo ntpd -qg; sudo ntpd hwclock -w'
 alias up='cd ~/reps/dotfiles/;git pull'
+alias pclr='sudo pacman -Sc'
 
 # django
 alias drs="python manage.py runserver"

@@ -178,6 +178,7 @@ alias hu='hg up'
 alias hp='hg push'
 alias hs='hg st'
 alias hd='hg diff'
+alias hd='hg cm'
 alias grep='egrep --color'
 alias gr='grep -rIn $1 **/*'
 alias ll='ls -l'
@@ -295,6 +296,7 @@ alias dm="python manage.py migrate"
 alias dms="python -m smtpd -n -c DebuggingServer localhost:1025"
 alias dmm="python manage.py makemessages -a"
 alias dcm="python manage.py compilemessages"
+alias dcs="python manage.py collectstatic"
 
 # tt
 alias ta="tt -a"

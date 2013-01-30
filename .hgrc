@@ -4,8 +4,13 @@ editor = vim
 merge = meld
 
 [extensions]
-hgext.graphlog = 
+graphlog = 
 color =
+pager =
+
+[pager]
+pager = LESS='FSRX' less
+attend = cat, diff, glog, log, incoming, outgoing, lg, sh, lf
 
 [color]
 status.modified = magenta bold

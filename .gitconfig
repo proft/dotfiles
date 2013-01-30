@@ -8,6 +8,9 @@
     uns = reset HEAD
     co = checkout    
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    outgoing = log origin/master..HEAD
+    incoming = "!git fetch $1; git log HEAD..$1/master"   
+    graph = log --graph --decorate --oneline --pretty=format:"%h%x20%Cgreen%d%x20%Cred%an%x20%Cblue%ad%x20%Creset%s" --all --full-history --date=short
 
 [color]
     ui = auto
@@ -28,7 +31,9 @@
     changed = green
     untracked = cyan
 
-#[diff]
-#    external = /home/proft/scripts/git-diff.py
 [push]
 	default = simple
+
+[merge]
+  # Always show a diffstat at the end of a merge
+  stat = true

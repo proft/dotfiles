@@ -50,8 +50,8 @@ nnoremap <C-S-A> <C-A>
 " spelling
 " setlocal spell spelllang=ru,en
 
-imap <F7> <Esc>:set spell!<CR><Esc>:setlocal spell spelllang=ru,en<CR>
-nmap <F7> :set spell!<CR>:setlocal spell spelllang=ru,en<CR>
+imap <F8> <Esc>:set spell!<CR><Esc>:setlocal spell spelllang=ru,en<CR>
+nmap <F8> :set spell!<CR>:setlocal spell spelllang=ru,en<CR>
 
 map <leader>sn ]s
 map <leader>sp [s
@@ -277,7 +277,7 @@ set tabline=%!MyTabLine()
 " [PLUGINS]
 
 " *** mru ***
-nmap <F2> :MRU<cr>
+nmap <F5> :MRU<cr>
 let MRU_Max_Entries = 30
 
 " *** nerd tree ***
@@ -339,7 +339,7 @@ nnoremap <leader>a :Ack
 " *** tagbar ***
 " let g:tagbar_left = 1
 " let g:tagbar_autoclose = 1
-nmap <F4> :TagbarToggle<CR>
+nmap <F6> :TagbarToggle<CR>
 
 " *** scratch ***
 nmap <leader><tab> :Sscratch<cr><C-W>x<C-j>:resize 10<cr>

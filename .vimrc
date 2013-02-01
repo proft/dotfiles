@@ -58,6 +58,11 @@ set pastetoggle=<F5>
 set completeopt=longest,menuone
 
 " mapping
+"
+" save
+nnoremap <F4> :w<CR>
+inoremap <F4> <esc>:w<CR>a
+
 " nnoremap ; :
 inoremap <C-J> <Esc>o
 inoremap <C-K> <Esc>O
@@ -155,7 +160,7 @@ vnoremap <C-l> >gv
 set shortmess+=I
 
 " switches match highlighting on and off
-nmap <F6> :set hls!<CR>
+nmap <F7> :set hls!<CR>
 
 "copy current file name
 nmap <Leader>f :let @+ = expand('%:t')<CR>

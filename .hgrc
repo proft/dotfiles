@@ -7,6 +7,7 @@ merge = meld
 graphlog = 
 color =
 pager =
+rebase = 
 
 [pager]
 pager = LESS='FSRX' less
@@ -30,6 +31,7 @@ sheads = heads --template '{date|shortdate} [{rev}:{node|short}] {author|person}
 sglog = glog --template '[{rev}:{node|short}] by {author|person} \n{desc|fill68}\n\n'
 
 cm = commit -m
-up = pull  -u
+up = pull -u
+pr = pull -rebase
 
 %include ~/.hgrc_local

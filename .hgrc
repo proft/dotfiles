@@ -11,7 +11,7 @@ rebase =
 
 [pager]
 pager = LESS='FSRX' less
-attend = cat, diff, glog, log, incoming, outgoing, lg, sh, lf
+attend = cat, diff, glog, log, incoming, outgoing, lg, sh, lf, blame
 
 [color]
 status.modified = magenta bold
@@ -33,5 +33,6 @@ sglog = glog --template '[{rev}:{node|short}] by {author|person} \n{desc|fill68}
 cm = commit -m
 up = pull -u
 pr = pull -rebase
+blame = annotate -n -u
 
 %include ~/.hgrc_local

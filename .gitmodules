@@ -76,9 +76,6 @@
 [submodule ".vim/bundle/vim-herokudoc-theme"]
 	path = .vim/bundle/vim-herokudoc-theme
 	url = git://github.com/uu59/vim-herokudoc-theme.git
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
 
 [submodule ".vim/bundle/tcomment_vim"]
 	path = .vim/bundle/tcomment_vim
@@ -91,9 +88,6 @@
 	path = .vim/bundle/vim-ado-manager
 	url = git://github.com/proft/vim-ado-manager.git
 
-[submodule ".vim/bundle/jedi-vim"]
-	path = .vim/bundle/jedi-vim
-	url = git://github.com/davidhalter/jedi-vim.git
 [submodule ".vim/bundle/python-mode"]
 	path = .vim/bundle/python-mode
 	url = git://github.com/klen/python-mode.git

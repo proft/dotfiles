@@ -368,6 +368,6 @@ if filereadable(gv_local)
 endif
 
 " *** python-klen
-let g:pymode_lint_write = 0
-let g:pymode_lint_ignore = "E401"
+let g:pymode_lint_write = 1
+let g:pymode_lint_ignore = "E401,E501"
 

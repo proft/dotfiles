@@ -32,7 +32,7 @@ sglog = glog --template '[{rev}:{node|short}] by {author|person} \n{desc|fill68}
 
 cm = commit -m
 up = pull -u
-pr = pull -rebase
+pr = pull --rebase
 blame = annotate -n -u
 
 %include ~/.hgrc_local

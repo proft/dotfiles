@@ -277,7 +277,7 @@ set tabline=%!MyTabLine()
 " [PLUGINS]
 
 " *** mru ***
-nmap <F5> :MRU<cr>
+nmap <F3> :MRU<cr>
 let MRU_Max_Entries = 30
 
 " *** nerd tree ***
@@ -309,7 +309,7 @@ nnoremap <silent> sd :FufDir<CR>
 nnoremap <silent> sb :FufBuffer<CR>
 nnoremap <silent> <leader>2 :FufFile ~/Dropbox/tabs/<CR>
 nnoremap <silent> <leader>3 :FufFile ~/Dropbox/blog/<CR>
-nnoremap <silent> <leader>1 :FufFile ~/Dropbox/0force/<CR>
+nnoremap <silent> <leader>1 :FufFile ~/Dropbox/blog/0force/<CR>
 nnoremap <silent> <leader>h :FufFile ~/<CR>
 nnoremap <silent> <leader>n :FufFile ~/Dropbox/notes/<CR>
 nnoremap <silent> sc :FufCoverageFile<CR>

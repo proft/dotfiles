@@ -137,6 +137,10 @@ autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} let g:surround_{char2nr("c")} =
 autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} let g:surround_{char2nr("h")} = "<h3 class=\"lb\">\r</h3>" 
 " autocmd BufNewFile * silent! 0r ~/.vim/skel/tpl.%:e
 
+" for html
+autocmd BufNewFile,BufRead *.{html} let g:surround_{char2nr("c")} = "<pre class=\"prettyprint\">\r</pre>" 
+autocmd BufNewFile,BufRead *.{html} let g:surround_{char2nr("h")} = "<b class=\"lb\">\r</b>" 
+
 " for javascript
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS

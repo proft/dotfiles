@@ -179,6 +179,7 @@ map <Leader>o :call Browser ()<CR>
 "map <Leader>tm :set ft=markdown<CR>
 "map <Leader>td :set ft=htmldjango<CR>
 nmap <Leader>ft :set ft=
+nmap <Leader>fh :set ft=html<CR>
 
 " switches wrap
 nmap <F8> :set wrap!<CR>

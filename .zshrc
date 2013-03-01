@@ -101,7 +101,7 @@ name() {
     command mv $1 $name
 }
 
-mcd() { mkdir $1; cd $1 }
+mcd() { mkdir -p $1; cd $1 }
 lcd() { cd "$1" && grc ls -l }
 
 vack() {
@@ -281,7 +281,7 @@ alias u='yaourt -Syua --noconfirm'
 alias rc='sudo vim /etc/rc.conf'
 alias pcfg='sudo vim /etc/pacman.conf'
 alias n='sudo netcfg -r wlan'
-alias utime='sudo ntpd -qg; sudo ntpd hwclock -w'
+alias utime='sudo ntpd -qg; sudo hwclock -w'
 alias up='cd ~/reps/dotfiles/;git pull'
 alias pclr='sudo pacman -Sc'
 

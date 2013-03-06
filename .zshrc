@@ -34,6 +34,13 @@ chpwd() {
     has_virtualenv
 }
 
+myip() {
+    local=`ifconfig wlan0 | grep "inet[^6]" | awk '{ print $2 }'` 
+    external=`curl -s icanhazip.com`
+    echo "Local: " $local
+    echo "External: " $external
+}
+
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable svn git
 zstyle ':vcs_info:*' check-for-changes true
@@ -100,9 +107,6 @@ name() {
     vared -c -p 'rename to: ' name
     command mv $1 $name
 }
-
-mcd() { mkdir -p $1; cd $1 }
-lcd() { cd "$1" && grc ls -l }
 
 vack() {
     vim $(ack -g $@)
@@ -250,6 +254,9 @@ alias -g F="&& notify-send --icon=/home/proft/temp/img/img/icons/checkmark.png F
     alias la='grc ls --classify --color --human-readable --group-directories-first -la'
     alias du='grc du -h'
 }
+
+mcd() { mkdir -p $1; cd $1 }
+lcd() { cd "$1" && ll }
 
 alias -s {avi,mpeg,mpg,mov,m2v}=smplayer
 alias -s {odt,doc,sxw,rtf}=lowriter

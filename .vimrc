@@ -182,7 +182,7 @@ nmap <Leader>ft :set ft=
 nmap <Leader>fh :set ft=html<CR>
 
 " switches wrap
-nmap <F8> :set wrap!<CR>
+nmap <F9> :set wrap!<CR>
 
 " switch buffer
 map <C-right> <ESC>:bn<CR>

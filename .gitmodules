@@ -4,24 +4,15 @@
 [submodule ".vim/bundle/ack"]
 	path = .vim/bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
-[submodule ".vim/bundle/align"]
-	path = .vim/bundle/align
-	url = git://github.com/vim-scripts/Align.git
 [submodule ".vim/bundle/delimitmate"]
 	path = .vim/bundle/delimitmate
 	url = git://github.com/Raimondi/delimitMate.git
 [submodule ".vim/bundle/fuzzyfinder"]
 	path = .vim/bundle/fuzzyfinder
 	url = git://github.com/vim-scripts/FuzzyFinder.git
-[submodule ".vim/bundle/jquery"]
-	path = .vim/bundle/jquery
-	url = git://github.com/vim-scripts/jQuery.git
 [submodule ".vim/bundle/l9"]
 	path = .vim/bundle/l9
 	url = git://github.com/vim-scripts/L9.git
-[submodule ".vim/bundle/markdown"]
-	path = .vim/bundle/markdown
-	url = git://github.com/plasticboy/vim-markdown.git
 [submodule ".vim/bundle/matchit"]
 	path = .vim/bundle/matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
@@ -31,45 +22,24 @@
 [submodule ".vim/bundle/rainbow-parenthesi"]
 	path = .vim/bundle/rainbow-parenthesi
 	url = git://github.com/vim-scripts/Rainbow-Parenthesis.git
-[submodule ".vim/bundle/sessionman"]
-	path = .vim/bundle/sessionman
-	url = git://github.com/vim-scripts/sessionman.vim.git
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
 [submodule ".vim/bundle/surround"]
 	path = .vim/bundle/surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
-	url = git://github.com/majutsushi/tagbar.git
-[submodule ".vim/bundle/rooter"]
-	path = .vim/bundle/rooter
-	url = git://github.com/airblade/vim-rooter.git
-[submodule ".vim/bundle/xptemplate"]
-	path = .vim/bundle/xptemplate
-	url = git://github.com/vim-scripts/xptemplate.git
 [submodule ".vim/bundle/zencoding"]
 	path = .vim/bundle/zencoding
 	url = git://github.com/vim-scripts/ZenCoding.vim.git
-[submodule ".vim/bundle/searchfold"]
-	path = .vim/bundle/searchfold
-	url = git://github.com/vim-scripts/searchfold.vim.git
 [submodule ".vim/bundle/powerline"]
 	path = .vim/bundle/powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
-[submodule ".vim/bundle/easymotion"]
-	path = .vim/bundle/easymotion
-	url = git://github.com/Lokaltog/vim-easymotion.git
 [submodule ".vim/bundle/color-lilypink"]
 	path = .vim/bundle/color-lilypink
 	url = git://github.com/vim-scripts/lilypink.git
 [submodule ".vim/bundle/closetag"]
 	path = .vim/bundle/closetag
 	url = git://github.com/docunext/closetag.vim.git
-[submodule ".vim/bundle/solarized"]
-	path = .vim/bundle/solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule ".vim/bundle/tlib"]
 	path = .vim/bundle/tlib
 	url = git://github.com/vim-scripts/tlib.git
@@ -87,10 +57,6 @@
 [submodule ".vim/bundle/vim-ado-manager"]
 	path = .vim/bundle/vim-ado-manager
 	url = git://github.com/proft/vim-ado-manager.git
-
-[submodule ".vim/bundle/python-mode"]
-	path = .vim/bundle/python-mode
-	url = git://github.com/klen/python-mode.git
 
 [submodule ".vim/bundle/vim-snipmate"]
 	path = .vim/bundle/vim-snipmate

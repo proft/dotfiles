@@ -223,7 +223,7 @@ alias cdt='cd ~/temp/'
 alias td='curl -I proft.me; ping -c2 proft.me'
 alias phttp='python -m SimpleHTTPServer'
 alias cal='cal -m'
-# alias ack='ack-grep'
+alias ns='sudo netstat -tulpn'
 
 alias mktar='tar -cvf'
 alias mkbz2='tar -cvjf'

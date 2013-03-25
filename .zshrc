@@ -53,6 +53,7 @@ precmd() {
     vcs_info 
     HG="$(hg_branch)$(hg_dirty)"
 }
+preexec () { print -Pn "\e]0;$1\a" }
 
 # PROMPT='%{$fg_bold[yellow]%}%n@%m%{$reset_color%}'
 PROMPT='%B%F{yellow}%n%b%F{magenta}@%m%F{green}${HG}${vcs_info_msg_0_}%F{blue}%(!.#.$)%F{magenta}%(?.. E:%?)$(cjobs)%f '

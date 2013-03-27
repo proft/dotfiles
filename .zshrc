@@ -175,6 +175,7 @@ alias gd='git diff'
 alias gl='git log --oneline --decorate'
 alias gw='git whatchanged'
 alias gst='git status -sb'
+alias gcl='git clone'
 alias pu=pushd
 alias po=popd
 alias h=hg

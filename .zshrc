@@ -298,6 +298,7 @@ alias up='cd ~/reps/dotfiles/;git pull'
 alias pclr='sudo pacman -Sc'
 
 # django
+alias rs="sudo djrs"
 alias drs="python manage.py runserver"
 alias ddb="python manage.py syncdb"
 alias dml="python manage.py migrate --list"

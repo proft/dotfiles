@@ -296,6 +296,8 @@ alias n='sudo netcfg -r wlan'
 alias utime='sudo ntpd -qg; sudo hwclock -w'
 alias up='cd ~/reps/dotfiles/;git pull'
 alias pclr='sudo pacman -Sc'
+alias reboot='sudo systemctl reboot'
+alias poweroff='sudo systemctl poweroff'
 
 # django
 alias rs="sudo djrs"

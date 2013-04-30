@@ -319,6 +319,7 @@ alias dcs="python manage.py collectstatic"
 alias ta="tt -a"
 alias tp="tt -c"
 alias tl="tt -t"
+alias tw="tt -w"
 alias tg="tt -g; chromium /tmp/tt.svg"
 
 export WORKON_HOME=$HOME/.virtualenvs

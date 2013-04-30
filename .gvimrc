@@ -342,7 +342,7 @@ nnoremap <leader>a :Ack
 
 " *** tagbar ***
 " let g:tagbar_left = 1
-" let g:tagbar_autoclose = 1
+let g:tagbar_autoclose = 1
 nmap <F6> :TagbarToggle<CR>
 
 " *** scratch ***
@@ -372,6 +372,8 @@ if filereadable(gv_local)
 endif
 
 " *** python-klen
-let g:pymode_lint_write = 1
 let g:pymode_lint_ignore = "E401,E501"
-
+let g:pymode_options = 0
+let g:pymode_lint_write = 0 " off check on save 
+let g:pymode_folding = 0 " off folding
+let g:pymode_rope_vim_completion = 0 " off rope autocompletion

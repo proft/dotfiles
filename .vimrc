@@ -11,7 +11,8 @@ let g:xptemplate_brace_complete=0
 
 " pathogen
 filetype off
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 call pathogen#helptags()
 
 filetype on
@@ -46,7 +47,7 @@ set showmatch
 set hlsearch
 
 set novisualbell 
-set cursorline nu
+"set cursorline nu
 
 " current command going on
 set showcmd

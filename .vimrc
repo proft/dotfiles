@@ -209,14 +209,16 @@ cmap Wa wa
 cmap WA wa
 cmap Wq wq
 
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
-" *** powerline ***
-"set guifont=Inconsolata-dz\ for\ Powerline\ 10
-"set fillchars+=stl:\ ,stlnc:\
-"set guifont=Ubuntu\ Mono\ 12
-" set guifont=Ubuntu\ Mono\ 12\ for\ Powerline:h14
+"cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " *** close tag ***
 autocmd FileType html,htmldjango,jinjahtml let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml source ~/.vim/bundle/closetag/plugin/closetag.vim
+
+" *** ctrlp ***
+nmap <F3> :CtrlPMRU<cr>
+nmap <C-b> :CtrlPBuffer<cr>
+
+" Open goto file
+nmap <C-p> :CtrlP<cr>
+imap <C-p> <esc>:CtrlP<cr>

@@ -281,20 +281,22 @@ set tabline=%!MyTabLine()
 " [PLUGINS]
 
 " *** mru ***
-nmap <F3> :MRU<cr>
-let MRU_Max_Entries = 30
+"nmap <F3> :MRU<cr>
+"let MRU_Max_Entries = 30
 
 " *** nerd tree ***
 autocmd BufEnter * lcd %:p:h
-if exists("loaded_nerd_tree")
-    function ShowNerdTreeToggle()
-        :execute 'NERDTreeToggle'
+"if exists("loaded_nerd_tree")
+"    function ShowNerdTreeToggle()
+"        :execute 'NERDTreeToggle'
         "set columns=140
-    endfunction
+"    endfunction
 
-    nmap <F3> :call ShowNerdTreeToggle()<CR>
+"    nmap <F3> :call ShowNerdTreeToggle()<CR>
     "nmap <F3> :NERDTreeToggle<CR>
-endif
+"endif
+map <F6> <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_gui_startup = 0
 
 " *** sessionman ***
 if exists("loaded_sessionman")
@@ -342,8 +344,10 @@ nnoremap <leader>a :Ack
 
 " *** tagbar ***
 " let g:tagbar_left = 1
-let g:tagbar_autoclose = 1
-nmap <F6> :TagbarToggle<CR>
+"let g:tagbar_autoclose = 1
+"nmap <F6> :TagbarToggle<CR>
+
+
 
 " *** scratch ***
 nmap <leader><tab> :Sscratch<cr><C-W>x<C-j>:resize 10<cr>
@@ -377,3 +381,7 @@ let g:pymode_options = 0
 let g:pymode_lint_write = 0 " off check on save 
 let g:pymode_folding = 0 " off folding
 let g:pymode_rope_vim_completion = 0 " off rope autocompletion
+
+"create line break when pressing enter
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1

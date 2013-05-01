@@ -16,9 +16,6 @@
 [submodule ".vim/bundle/matchit"]
 	path = .vim/bundle/matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
-[submodule ".vim/bundle/mru"]
-	path = .vim/bundle/mru
-	url = git://github.com/vim-scripts/mru.vim.git
 [submodule ".vim/bundle/rainbow-parenthesi"]
 	path = .vim/bundle/rainbow-parenthesi
 	url = git://github.com/vim-scripts/Rainbow-Parenthesis.git
@@ -31,9 +28,6 @@
 [submodule ".vim/bundle/zencoding"]
 	path = .vim/bundle/zencoding
 	url = git://github.com/vim-scripts/ZenCoding.vim.git
-[submodule ".vim/bundle/powerline"]
-	path = .vim/bundle/powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
 [submodule ".vim/bundle/color-lilypink"]
 	path = .vim/bundle/color-lilypink
 	url = git://github.com/vim-scripts/lilypink.git
@@ -69,3 +63,15 @@
     path = .vim/bundle/snipmate-snippets
     url = https://github.com/vim-scripts/snipmate-snippets
 
+[submodule ".vim/bundle/ctrlp"]
+	path = .vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule ".vim/bundle/vim-nerdtree-tabs"]
+	path = .vim/bundle/vim-nerdtree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/vim-xkbswitch"]
+	path = .vim/bundle/vim-xkbswitch
+	url = http://github.com/lyokha/vim-xkbswitch

@@ -49,10 +49,11 @@ zstyle ':vcs_info:*' stagedstr "+"
 zstyle ':vcs_info:*' unstagedstr "!"
 zstyle ':vcs_info:*' formats '[%s:%b%F{red}%c%u%F{green}]'
 setopt PROMPT_SUBST
-precmd() { 
-    vcs_info 
-    HG="$(hg_branch)$(hg_dirty)"
-}
+# precmd() { 
+#     vcs_info 
+#     HG="$(hg_branch)$(hg_dirty)"
+# }
+
 preexec () { print -Pn "\e]0;$1\a" }
 
 # PROMPT='%{$fg_bold[yellow]%}%n@%m%{$reset_color%}'
@@ -328,3 +329,4 @@ source /usr/bin/virtualenvwrapper.sh
 export EDITOR=vim
 
 source ~/.zsh_local
+source /usr/share/zsh/site-contrib/powerline.zsh

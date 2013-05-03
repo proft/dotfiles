@@ -222,3 +222,7 @@ nmap <C-b> :CtrlPBuffer<cr>
 " Open goto file
 nmap <C-p> :CtrlP<cr>
 imap <C-p> <esc>:CtrlP<cr>
+
+" *** xkb-switch ***
+let g:XkbSwitchEnabled = 1 
+let g:XkbSwitchIMappings = ['ru']

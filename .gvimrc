@@ -140,6 +140,7 @@ autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} let g:surround_{char2nr("h")} =
 " for html
 autocmd BufNewFile,BufRead *.{html} let g:surround_{char2nr("c")} = "<pre class=\"prettyprint\">\r</pre>" 
 autocmd BufNewFile,BufRead *.{html} let g:surround_{char2nr("h")} = "<b class=\"lb\">\r</b>" 
+autocmd BufNewFile,BufRead *.{html} let g:surround_{char2nr("u")} = "[\r]()" 
 
 " for javascript
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery

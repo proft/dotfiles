@@ -42,7 +42,7 @@ myip() {
 }
 
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable svn git
+zstyle ':vcs_info:*' enable svn git hg
 zstyle ':vcs_info:*' check-for-changes true
 # zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' stagedstr "+"
@@ -57,8 +57,8 @@ setopt PROMPT_SUBST
 preexec () { print -Pn "\e]0;$1\a" }
 
 # PROMPT='%{$fg_bold[yellow]%}%n@%m%{$reset_color%}'
-PROMPT='%B%F{yellow}%n%b%F{magenta}@%m%F{green}${HG}${vcs_info_msg_0_}%F{blue}%(!.#.$)%F{magenta}%(?.. E:%?)$(cjobs)%f '
-RPROMPT="%{$fg_bold[grey]%}%~/%{$reset_color%}%"
+#PROMPT='%B%F{yellow}%n%b%F{magenta}@%m%F{green}${HG}${vcs_info_msg_0_}%F{blue}%(!.#.$)%F{magenta}%(?.. E:%?)$(cjobs)%f '
+#RPROMPT="%{$fg_bold[grey]%}%~/%{$reset_color%}%"
 
 # -[ completion ]-
 fpath=(~/.zshfuncs $fpath)
@@ -315,6 +315,7 @@ alias dms="python -m smtpd -n -c DebuggingServer localhost:1025"
 alias dmm="python manage.py makemessages -a"
 alias dcm="python manage.py compilemessages"
 alias dcs="python manage.py collectstatic"
+alias gve="echo $VIRTUAL_ENV/lib/python2.7/site-packages/ | xclip -i"
 
 # tt
 alias ta="tt -a"
@@ -325,6 +326,7 @@ alias tg="tt -g; chromium /tmp/tt.svg"
 
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
+VIRTUAL_ENV_DISABLE_PROMPT=true
 
 export EDITOR=vim
 

@@ -42,23 +42,23 @@ myip() {
 }
 
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable svn git hg
+zstyle ':vcs_info:*' enable svn git
 zstyle ':vcs_info:*' check-for-changes true
 # zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' stagedstr "+"
 zstyle ':vcs_info:*' unstagedstr "!"
 zstyle ':vcs_info:*' formats '[%s:%b%F{red}%c%u%F{green}]'
 setopt PROMPT_SUBST
-# precmd() { 
-#     vcs_info 
-#     HG="$(hg_branch)$(hg_dirty)"
-# }
+precmd() { 
+     vcs_info 
+     HG="$(hg_branch)$(hg_dirty)"
+}
 
 preexec () { print -Pn "\e]0;$1\a" }
 
 # PROMPT='%{$fg_bold[yellow]%}%n@%m%{$reset_color%}'
-#PROMPT='%B%F{yellow}%n%b%F{magenta}@%m%F{green}${HG}${vcs_info_msg_0_}%F{blue}%(!.#.$)%F{magenta}%(?.. E:%?)$(cjobs)%f '
-#RPROMPT="%{$fg_bold[grey]%}%~/%{$reset_color%}%"
+PROMPT='%B%F{yellow}%n%b%F{magenta}@%m%F{green}${HG}${vcs_info_msg_0_}%F{blue}%(!.#.$)%F{magenta}%(?.. E:%?)$(cjobs)%f '
+RPROMPT="%{$fg_bold[grey]%}%~/%{$reset_color%}%"
 
 # -[ completion ]-
 fpath=(~/.zshfuncs $fpath)
@@ -177,8 +177,6 @@ alias gl='git log --oneline --decorate'
 alias gw='git whatchanged'
 alias gst='git status -sb'
 alias gcl='git clone'
-alias pu=pushd
-alias po=popd
 alias h=hg
 alias hl='hg lg'
 alias hu='hg up'
@@ -217,7 +215,7 @@ alias vimup='cd ~/reps/dotfiles;git submodule foreach git pull origin master'
 alias i='ipython'
 alias ipl='ipython --pylab'
 alias ur='unrar --enable-charset x'
-alias pi='pip install $1 -U'
+alias pu='pip install $1 -U'
 alias piz='pip freeze'
 alias spi='sudo pip install $1 -U -i http://d.pypi.python.org/simple/ -M --mirrors=http://d.pypi.python.org/'
 alias wheredj='python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"'
@@ -326,9 +324,9 @@ alias tg="tt -g; chromium /tmp/tt.svg"
 
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
-VIRTUAL_ENV_DISABLE_PROMPT=true
 
 export EDITOR=vim
 
 source ~/.zsh_local
-source /usr/share/zsh/site-contrib/powerline.zsh
+#source /usr/share/zsh/site-contrib/powerline.zsh
+#VIRTUAL_ENV_DISABLE_PROMPT=true

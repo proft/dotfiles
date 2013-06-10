@@ -103,9 +103,9 @@ nnoremap \2 :call RelatedFile ("views.py")<cr>
 nnoremap \3 :call RelatedFile ("urls.py")<cr>
 nnoremap \4 :call RelatedFile ("admin.py")<cr>
 nnoremap \5 :call RelatedFile ("tests.py")<cr>
-nnoremap \6 :call RelatedFile ( "templates/" )<cr>
-nnoremap \7 :call RelatedFile ( "templatetags/" )<cr>
-nnoremap \8 :call RelatedFile ( "management/" )<cr>
+nnoremap \6 :call RelatedFile ("templates/" )<cr>
+nnoremap \7 :call RelatedFile ("templatetags/" )<cr>
+nnoremap \8 :call RelatedFile ("management/" )<cr>
 nnoremap \0 :e settings.py<cr>
 nnoremap \9 :e urls.py<cr>
 

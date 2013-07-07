@@ -166,6 +166,8 @@ WORDCHARS=${WORDCHARS//[&=\/;!#%]}
 alias j=jobs
 alias t=htop
 alias s='sudo systemctl'
+alias sr='sudo systemctl start'
+alias si='sudo systemctl status'
 alias nt='sudo nethogs wlan0'
 alias it='sudo iotop -oa'
 alias g=git
@@ -194,7 +196,6 @@ alias lsd='ls -lhd *(-/DN)' # only dirs
 alias l='less -N -M'
 alias c='cat'
 alias ccat='pygmentize -f terminal -g'
-alias vl='/usr/share/vim/vim73/macros/less.sh'
 alias cp='nocorrect cp --interactive --verbose --recursive --preserve=all'
 alias mv='nocorrect mv --verbose --interactive'
 alias rm='nocorrect rm -Irv'
@@ -212,6 +213,7 @@ alias sv='sudo vim'
 alias svh='sudo vim /etc/hosts'
 alias gv='gvim --remote-tab-silent'
 alias vimup='cd ~/reps/dotfiles;git submodule foreach git pull origin master'
+alias p='python'
 alias i='ipython'
 alias ipl='ipython --pylab'
 alias ur='unrar --enable-charset x'
@@ -281,8 +283,7 @@ alias akey='sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys'
 alias pfu='dpkg -l | grep'
 
 # pacman && arch
-alias pacman='PACMAN=/usr/bin/pacman; [ -f /usr/bin/pacman-color ] && PACMAN=/usr/bin/pacman-color; $PACMAN $@'
-alias p='pacman'
+alias pm='pacman'
 alias pi='sudo pacman -S'
 alias pd='sudo pacman -R'
 alias pf='pacman -Ss'

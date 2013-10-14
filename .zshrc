@@ -34,8 +34,13 @@ chpwd() {
     has_virtualenv
 }
 
+active_iface() {
+    echo `route | grep default | awk '{print $8}'`
+}
+IFACE=`active_iface`
+
 myip() {
-    local=`ifconfig wlan0 | grep "inet[^6]" | awk '{ print $2 }'` 
+    local=`ifconfig $IFACE | grep "inet[^6]" | awk '{ print $2 }'` 
     external=`curl -s icanhazip.com`
     echo "Local: " $local
     echo "External: " $external
@@ -168,7 +173,7 @@ alias t=htop
 alias s='sudo systemctl'
 alias sr='sudo systemctl start'
 alias si='sudo systemctl status'
-alias nt='sudo nethogs wlan0'
+alias nt='sudo nethogs $IFACE'
 alias it='sudo iotop -oa'
 alias g=git
 alias gc='git commit -a -m'
@@ -193,6 +198,8 @@ alias ll='ls -l'
 alias la='ls -la'
 alias ls='ls --classify --color --human-readable --group-directories-first'
 alias sls='sudo ls -l --classify --color --human-readable --group-directories-first'
+alias sc='sudo cat'
+alias sl='sudo less'
 alias lsd='ls -lhd *(-/DN)' # only dirs
 alias l='less -N -M'
 alias c='cat'
@@ -225,7 +232,7 @@ alias wheredj='python -c "from distutils.sysconfig import get_python_lib; print 
 alias mcl='mysql --auto-rehash -uroot -pqwerty'
 alias cdt='cd ~/temp/'
 alias td='curl -I proft.me; ping -c2 proft.me'
-alias phttp='python -m SimpleHTTPServer'
+alias phttp='python2 -m SimpleHTTPServer'
 alias cal='cal -m'
 alias ns='sudo netstat -tulpn'
 
@@ -292,6 +299,7 @@ alias q='pacman -Q'
 alias y='yaourt'
 alias yi='yaourt -S --noconfirm'
 alias u='yaourt -Syua --noconfirm'
+alias yr='yaourt -Rs'
 alias rc='sudo vim /etc/rc.conf'
 alias pcfg='sudo vim /etc/pacman.conf'
 alias n='sudo netctl restart wlan'

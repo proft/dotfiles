@@ -170,6 +170,7 @@ WORDCHARS=${WORDCHARS//[&=\/;!#%]}
 # -[ alias ]-
 alias j=jobs
 alias t=htop
+alias m=mutt
 alias s='sudo systemctl'
 alias sr='sudo systemctl start'
 alias si='sudo systemctl status'
@@ -310,6 +311,7 @@ alias reboot='sudo systemctl reboot'
 alias poweroff='sudo systemctl poweroff'
 
 # django
+alias f=fab
 alias rs="sudo djrs"
 alias drs="python manage.py runserver"
 alias ddb="python manage.py syncdb"

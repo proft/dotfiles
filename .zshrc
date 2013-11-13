@@ -326,7 +326,7 @@ alias dm="python manage.py migrate"
 alias dms="python -m smtpd -n -c DebuggingServer localhost:1025"
 alias dmm="python manage.py makemessages -a"
 alias dcm="python manage.py compilemessages"
-alias dcs="python manage.py collectstatic"
+alias dcs="python manage.py collectstatic --noinput"
 alias gve="echo $VIRTUAL_ENV/lib/python2.7/site-packages/ | xclip -i"
 
 # tt

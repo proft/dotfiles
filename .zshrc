@@ -313,6 +313,7 @@ alias poweroff='sudo systemctl poweroff'
 # django
 alias f=fab
 alias rs="sudo djrs"
+alias rsp="sudo djrsp"
 alias drs="python manage.py runserver"
 alias ddb="python manage.py syncdb"
 alias dml="python manage.py migrate --list"

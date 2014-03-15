@@ -82,7 +82,7 @@ let python_highlight_all = 1
 let python_highlight_space_errors = 0
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
 "autocmd FileType python set cc=80
-autocmd FileType python iab pdb import ipdb; ipdb.set_trace() 
+autocmd FileType python iab pdb import ipdb; ipdb.set_trace()
 autocmd FileType python iab u8 # -*- coding: utf-8 -*-
 au Filetype htmldjango inoremap <buffer> <c-g> {{<space><space>}}<left><left><left>
 au Filetype htmldjango inoremap <buffer> <c-h> {%<space><space>%}<left><left><left>
@@ -96,7 +96,7 @@ au Filetype htmldjango let b:surround_{char2nr("w")} = "{% with \1with: \1 %}\r{
 au Filetype htmldjango let b:surround_{char2nr("f")} = "{% for \1for loop: \1 %}\r{% endfor %}"
 au Filetype htmldjango let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
 
-" for django 
+" for django
 let g:last_relative_dir = ''
 nnoremap \1 :call RelatedFile ("models.py")<cr>
 nnoremap \2 :call RelatedFile ("views.py")<cr>
@@ -133,14 +133,14 @@ autocmd BufEnter *.py call SetAppDir()
 
 " for markdown
 autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown
-autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} let g:surround_{char2nr("c")} = "<pre class=\"prettyprint\">\r</pre>" 
-autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} let g:surround_{char2nr("h")} = "<h3 class=\"lb\">\r</h3>" 
+autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} let g:surround_{char2nr("c")} = "<pre class=\"prettyprint\">\r</pre>"
+autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} let g:surround_{char2nr("h")} = "<h3 class=\"lb\">\r</h3>"
 " autocmd BufNewFile * silent! 0r ~/.vim/skel/tpl.%:e
 
 " for html
-autocmd BufNewFile,BufRead *.{html} let g:surround_{char2nr("c")} = "<pre class=\"prettyprint\">\r</pre>" 
-autocmd BufNewFile,BufRead *.{html} let g:surround_{char2nr("h")} = "<b class=\"lb\">\r</b>" 
-autocmd BufNewFile,BufRead *.{html} let g:surround_{char2nr("u")} = "[\r]()" 
+autocmd BufNewFile,BufRead *.{html} let g:surround_{char2nr("c")} = "<pre class=\"prettyprint\">\r</pre>"
+autocmd BufNewFile,BufRead *.{html} let g:surround_{char2nr("h")} = "<b class=\"lb\">\r</b>"
+autocmd BufNewFile,BufRead *.{html} let g:surround_{char2nr("u")} = "[\r]()"
 
 " for javascript
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
@@ -169,7 +169,7 @@ map <C-tab> :tabnext<cr>
 map <C-E> :tabclose<cr>
 imap <S-tab> <ESC>:tabprevious<cr>i
 imap <C-tab> <ESC>:tabnext<cr>i
-imap <C-t> <ESC>:tabnew<cr> 
+imap <C-t> <ESC>:tabnew<cr>
 imap <C-E> <ESC>:tabclose<cr>
 map ,tl :call MoveTabLeft()<CR>
 map ,tr :call MoveTabRight()<CR>
@@ -379,7 +379,7 @@ endif
 " *** python-klen
 let g:pymode_lint_ignore = "E401,E501"
 let g:pymode_options = 0
-let g:pymode_lint_write = 0 " off check on save 
+let g:pymode_lint_write = 0 " off check on save
 let g:pymode_folding = 0 " off folding
 let g:pymode_rope_vim_completion = 0 " off rope autocompletion
 

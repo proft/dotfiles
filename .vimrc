@@ -1,22 +1,52 @@
 " proft vim config [http://proft.me]
 
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'bling/vim-airline'
+Bundle 'jonathanfilip/vim-lucius'
+Bundle 'vim-scripts/lilypink'
+Bundle 'mileszs/ack.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'vim-scripts/FuzzyFinder'
+Bundle 'L9'
+Bundle 'vim-scripts/matchit.zip'
+Bundle 'vim-scripts/Rainbow-Parenthesis'
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/ZenCoding.vim'
+Bundle 'docunext/closetag.vim'
+Bundle 'vim-scripts/tlib'
+Bundle 'uu59/vim-herokudoc-theme'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'Yggdroot/indentLine'
+Bundle 'proft/vim-ado-manager'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'garbas/vim-snipmate'
+Bundle 'vim-scripts/snipmate-snippets'
+Bundle 'kien/ctrlp.vim'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'scrooloose/nerdtree'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'tpope/vim-markdown'
+Bundle 'pangloss/vim-javascript'
+
+"filetype on
+"filetype plugin on
+
+filetype plugin indent on
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
 syntax on
 set nu
 set t_Co=256
 "colorscheme calmar256-dark
-colorscheme lucius
-
-" *** xptemplate ***
-let g:xptemplate_brace_complete=0
-
-" pathogen
-filetype off
-"call pathogen#runtime_append_all_bundles()
-call pathogen#incubate()
-call pathogen#helptags()
-
-filetype on
-filetype plugin on
+colorscheme lilypink
 
 set encoding=utf-8
 
@@ -26,7 +56,6 @@ set laststatus=2
 
 set mouse=a
 
-set nocompatible
 set modeline        " last lines in document sets vim mode
 set modelines=3     " number lines checked for modelines
 
@@ -46,7 +75,7 @@ set incsearch
 set showmatch
 set hlsearch
 
-set novisualbell 
+set novisualbell
 "set cursorline nu
 
 " current command going on
@@ -79,7 +108,7 @@ set termencoding=utf-8
 
 " formattage
 set autoindent
-set smartindent         
+set smartindent
 
 " perl/python compatible regex formatting
 nnoremap / /\v
@@ -224,5 +253,5 @@ nmap <C-p> :CtrlP<cr>
 imap <C-p> <esc>:CtrlP<cr>
 
 " *** xkb-switch ***
-let g:XkbSwitchEnabled = 1 
+let g:XkbSwitchEnabled = 1
 let g:XkbSwitchIMappings = ['ru']

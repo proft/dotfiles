@@ -40,7 +40,7 @@ active_iface() {
 IFACE=`active_iface`
 
 myip() {
-    local=`ifconfig $IFACE | grep "inet[^6]" | awk '{ print $2 }'` 
+    local=`ifconfig $IFACE | grep "inet[^6]" | awk '{ print $2 }'`
     external=`curl -s icanhazip.com`
     echo "Local: " $local
     echo "External: " $external
@@ -54,8 +54,8 @@ zstyle ':vcs_info:*' stagedstr "+"
 zstyle ':vcs_info:*' unstagedstr "!"
 zstyle ':vcs_info:*' formats '[%s:%b%F{red}%c%u%F{green}]'
 setopt PROMPT_SUBST
-precmd() { 
-     vcs_info 
+precmd() {
+     vcs_info
      HG="$(hg_branch)$(hg_dirty)"
 }
 
@@ -163,7 +163,7 @@ pk () {
  else
  echo "'$1' is not a valid file"
  fi
-}   
+}
 
 WORDCHARS=${WORDCHARS//[&=\/;!#%]}
 
@@ -239,6 +239,7 @@ alias phttp='python2 -m SimpleHTTPServer'
 alias cal='cal -m'
 alias ns='sudo netstat -tulpn'
 alias va='vagrant'
+alias iwl='sudo iw wlan0 scan | egrep "signal|SSID"'
 
 alias mktar='tar -cvf'
 alias mkbz2='tar -cvjf'

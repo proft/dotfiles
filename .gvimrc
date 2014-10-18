@@ -383,6 +383,9 @@ let g:pymode_lint_write = 0 " off check on save
 let g:pymode_folding = 0 " off folding
 let g:pymode_rope_vim_completion = 0 " off rope autocompletion
 
-"create line break when pressing enter
+" create line break when pressing enter
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
+
+" *** pydiction
+let g:pydiction_location = '/home/proft/.vim/bundle/pydiction/complete-dict'

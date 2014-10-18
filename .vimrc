@@ -32,8 +32,12 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'scrooloose/nerdtree'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'tpope/vim-markdown'
+" Bundle 'tpope/vim-markdown'
 Bundle 'pangloss/vim-javascript'
+Bundle 'rkulla/pydiction'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
 
 "filetype on
 "filetype plugin on

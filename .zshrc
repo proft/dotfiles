@@ -35,7 +35,7 @@ chpwd() {
 }
 
 active_iface() {
-    echo `route | grep default | awk '{print $8}'`
+    echo `ip route show | grep default | awk '{print $5}'`
 }
 IFACE=`active_iface`
 

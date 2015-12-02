@@ -182,6 +182,7 @@ alias gp='git push'
 alias gu='git pull'
 alias gd='git diff'
 alias gl='git log --oneline --decorate'
+alias gll="git log --pretty=format:'%C(yellow)%h %Cblue%an %Cred%ad %Cgreen%d %Creset%s' --date=short"
 alias gw='git whatchanged'
 alias gst='git status -sb'
 alias gcl='git clone'
@@ -238,6 +239,7 @@ alias td='curl -I proft.me; ping -c2 proft.me'
 alias phttp='python2 -m SimpleHTTPServer'
 alias cal='cal -m'
 alias ns='sudo netstat -tulpn'
+alias listen="lsof -P -i -n" 
 alias va='vagrant'
 alias iwl='sudo iw wlan0 scan | egrep "signal|SSID"'
 
@@ -332,6 +334,9 @@ alias dmm="python manage.py makemessages -a"
 alias dcm="python manage.py compilemessages"
 alias dcs="python manage.py collectstatic --noinput"
 alias gve="echo $VIRTUAL_ENV/lib/python2.7/site-packages/ | xclip -i"
+
+# meteor
+alias mr="source env.sh; meteor"
 
 # tt
 alias ta="tt -a"

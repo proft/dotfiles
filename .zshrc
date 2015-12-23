@@ -336,7 +336,7 @@ alias dcs="python manage.py collectstatic --noinput"
 alias gve="echo $VIRTUAL_ENV/lib/python2.7/site-packages/ | xclip -i"
 
 # meteor
-alias mr="source env.sh; meteor -settings settings.json"
+alias mr="source env.sh; meteor --settings settings.json"
 
 # tt
 alias ta="tt -a"

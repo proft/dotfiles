@@ -243,6 +243,7 @@ alias listen="lsof -P -i -n"
 alias va='vagrant'
 alias iwl='sudo iw wlp3s0-proft.me scan | egrep "signal|SSID"'
 alias ci='coffee -i'
+alias cw='coffee -w'
 
 alias mktar='tar -cvf'
 alias mkbz2='tar -cvjf'

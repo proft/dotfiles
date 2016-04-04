@@ -241,7 +241,8 @@ alias cal='cal -m'
 alias ns='sudo netstat -tulpn'
 alias listen="lsof -P -i -n" 
 alias va='vagrant'
-alias iwl='sudo iw wlan0 scan | egrep "signal|SSID"'
+alias iwl='sudo iw wlp3s0-proft.me scan | egrep "signal|SSID"'
+alias ci='coffee -i'
 
 alias mktar='tar -cvf'
 alias mkbz2='tar -cvjf'
